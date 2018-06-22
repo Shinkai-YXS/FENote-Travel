@@ -44,7 +44,7 @@
       padding-left .2rem
       line-height .64rem
       height .64rem
-      border-radius .1rem
+      border-radius .08rem
       color #cccccc
       background #fff
 
