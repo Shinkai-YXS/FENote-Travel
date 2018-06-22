@@ -1,11 +1,16 @@
 <template>
   <div class="icons">
-    <div class="icon" v-for="icon of icons" :key="icon.id">
-      <div class="icon-img">
-        <img class="icon-img-content" :src="icon.imgUrl" />
-      </div>
-      <p class="icon-name">{{icon.name}}</p>
-    </div>
+    <swiper :options="swiperOption">
+      <swiper-slide v-for="(page, index) of pages" :key="index">
+        <div class="icon" v-for="icon of page" :key="icon.id">
+          <div class="icon-img">
+            <img class="icon-img-content" :src="icon.imgUrl"/>
+          </div>
+          <p class="icon-name">{{icon.name}}</p>
+        </div>
+      </swiper-slide>
+      <div class="swiper-pagination"  slot="pagination"></div>
+    </swiper>
   </div>
 </template>
 
@@ -54,42 +59,73 @@
             id: '008',
             imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
             name: 'Q+精选'
+          },
+          {
+            id: '009',
+            imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
+            name: 'Q+精选'
+          },
+          {
+            id: '010',
+            imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
+            name: 'Q+精选'
           }
-        ]
+        ],
+        swiperOption: {
+          pagination: '.swiper-pagination' // 显示分页功能组件
+        },
+      }
+    },
+    computed: {
+      pages () {
+        const pages = []
+        this.icons.forEach((item, index) => {
+          const page = Math.floor(index / 8)
+          if (!pages[page]) {
+            pages[page] = []
+          }
+          pages[page].push(item)
+        })
+        return pages
       }
     }
   }
 </script>
 
 <style scoped lang="stylus">
-@import '~styles/default.styl'
-  .icons
-    overflow hidden
+  @import '~styles/default.styl'
+  @import '~styles/mixins.styl'
+
+  .icons >>> .swiper-container
+    margin-top .1rem
     height 0
     padding-bottom 50%
-    .icon
-      position relative
-      float left
-      overflow hidden
-      height 0
-      width 25%
-      padding-bottom 25%
-      text-align center
-      .icon-img
-        position absolute
-        top 0
-        right 0
-        left 0
-        bottom .44rem
-        padding .1rem
-        .icon-img-content
-          height 100%
-      .icon-name
-        position absolute
-        left 0
-        right 0
-        line-height .44rem
-        height .44rem
-        color: $dartTextColor
-        bottom .1rem
+
+  .icon
+    position relative
+    float left
+    overflow hidden
+    height 0
+    width 25%
+    padding-bottom 22%
+    text-align center
+    .icon-img
+      position absolute
+      top 0
+      right 0
+      left 0
+      height 1.15rem
+      bottom .44rem
+      padding .1rem
+      .icon-img-content
+        height 100%
+    .icon-name
+      position absolute
+      left 0
+      right 0
+      line-height .44rem
+      height .44rem
+      color: $dartTextColor
+      bottom .1rem
+      ellipsis()
 </style>
