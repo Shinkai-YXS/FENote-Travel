@@ -62,13 +62,13 @@
           },
           {
             id: '009',
-            imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-            name: 'Q+精选'
+            imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png',
+            name: '演出'
           },
           {
             id: '010',
-            imgUrl:'http://img1.qunarzz.com/piao/fusion/1804/ed/cf572be30fc32f02.png',
-            name: 'Q+精选'
+            imgUrl:'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
+            name: '全部完乐'
           }
         ],
         swiperOption: {
@@ -97,35 +97,33 @@
   @import '~styles/mixins.styl'
 
   .icons >>> .swiper-container
-    margin-top .1rem
-    height 0
-    padding-bottom 50%
+    padding-top .1rem
+    height 3.7rem
+  .icons >>> .swiper-pagination-bullet
+    width .12rem
+    height .12rem
+  .icons >>> .swiper-pagination-bullet-active
+    background $bgColor
 
   .icon
     position relative
     float left
+    padding-top .1rem
     overflow hidden
-    height 0
+    height 1.5rem
     width 25%
-    padding-bottom 22%
     text-align center
     .icon-img
-      position absolute
-      top 0
-      right 0
-      left 0
-      height 1.15rem
-      bottom .44rem
-      padding .1rem
+      display inline-block
+      width 1.1rem
+      height 1.1rem
       .icon-img-content
+        display block
+        margin 0 auto
         height 100%
     .icon-name
-      position absolute
-      left 0
-      right 0
-      line-height .44rem
-      height .44rem
+      margin-top .1rem
+      font-size .28rem
       color: $dartTextColor
-      bottom .1rem
       ellipsis()
 </style>

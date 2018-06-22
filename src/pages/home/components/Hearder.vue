@@ -44,8 +44,8 @@
       padding-left .2rem
       line-height .64rem
       height .64rem
-      border-radius .08rem
-      color #cccccc
+      border-radius .06rem
+      color $lightGrayTextColor
       background #fff
 
     .header-right
