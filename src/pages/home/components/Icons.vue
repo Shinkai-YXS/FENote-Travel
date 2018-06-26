@@ -123,7 +123,7 @@
         height 100%
     .icon-name
       margin-top .1rem
-      font-size .28rem
+      font-size $titleFontSize
       color: $dartTextColor
       ellipsis()
 </style>
