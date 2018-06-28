@@ -7,7 +7,7 @@
         <div class="item-info">
           <p class="item-list item-title">国色天乡·陆地乐园</p>
           <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看更多></span>
+          <span class="item-more">查看详情</span>
         </div>
       </li>
       <li class="item">
@@ -15,7 +15,7 @@
         <div class="item-info">
           <p class="item-list item-title">国色天乡·陆地乐园</p>
           <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看更多></span>
+          <span class="item-more">查看详情</span>
         </div>
       </li>
       <li class="item">
@@ -23,7 +23,7 @@
         <div class="item-info">
           <p class="item-list item-title">国色天乡·陆地乐园</p>
           <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看更多></span>
+          <span class="item-more">查看详情</span>
         </div>
       </li>
       <li class="item">
@@ -31,7 +31,7 @@
         <div class="item-info">
           <p class="item-list item-title">国色天乡·陆地乐园</p>
           <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看更多></span>
+          <span class="item-more">查看详情</span>
         </div>
       </li>
       <li class="item">
@@ -39,7 +39,7 @@
         <div class="item-info">
           <p class="item-list item-title">国色天乡·陆地乐园</p>
           <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看更多></span>
+          <span class="item-more">查看详情></span>
         </div>
       </li>
     </ul>
@@ -73,25 +73,26 @@
       float left
       overflow hidden
       margin 0 .2rem
-      width 2rem
-      height 2rem
+      width 1.7rem
+      height 1.7rem
       background #f0f5f8
     .item-info
       margin .1rem .1rem
       .item-list
         display block
-        height 0.7rem
+        height 0.5rem
       .item-title
         font-size $titleFontSize
         color $dartTextColor
         ellipsis()
       .item-desc
-        font-size $descFontSize
         color $grayTextColor
         ellipsis()
       .item-more
-        background #ffA550
+        margin-top .2rem
+        line-height .44rem
+        background #ff9300
         color: #fff
         padding 0.1rem 0.2rem
-        border-radius 0.05rem
+        border-radius 0.06rem
 </style>

@@ -104,13 +104,15 @@
     height .12rem
   .icons >>> .swiper-pagination-bullet-active
     background $bgColor
+  .icons >>> .swiper-pagination-bullets
+    bottom .02rem
 
   .icon
     position relative
     float left
     padding-top .1rem
     overflow hidden
-    height 1.5rem
+    height 1.6rem
     width 25%
     text-align center
     .icon-img
@@ -123,7 +125,7 @@
         height 100%
     .icon-name
       margin-top .1rem
-      font-size $titleFontSize
+      font-size $descFontSize
       color: $dartTextColor
       ellipsis()
 </style>
