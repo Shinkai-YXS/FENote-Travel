@@ -13,22 +13,15 @@
 <script>
   export default {
     name: "HomeSwiper",
+    props: {
+      swiperList: Array
+    },
     data () {
       return {
         swiperOption: {
           pagination: '.swiper-pagination', // 显示分页功能组件
           loop: true // 支持循环轮播
-        },
-        swiperList: [
-          {
-            id: '0001',
-            imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/e5/fc2bfc8bfcccd402.jpg_750x200_1218ab5f.jpg'
-          },
-          {
-            id: '0002',
-            imgUrl: 'http://img1.qunarzz.com/piao/fusion/1806/fc/e47aa3e1c67bbc02.jpg_750x200_0f3eecf8.jpg'
-          },
-        ]
+        }
       }
     },
     methods: {
@@ -49,7 +42,7 @@
     overflow hidden
     width 100%
     height 0
-    padding-bottom 26.66%
+    padding-bottom 31%
     background #eee
     .wapper-img
       width 100%

@@ -2,44 +2,12 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1704/a5/a59677101e07d38a3.img.jpg_200x200_6064e939.jpg" />
+      <li class="item" v-for="item in recommendList" :key="item.id">
+        <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
-          <p class="item-list item-title">国色天乡·陆地乐园</p>
-          <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
+          <p class="item-list item-title">{{item.title}}</p>
+          <p class="item-list item-desc">{{item.desc}}</p>
           <span class="item-more">查看详情</span>
-        </div>
-      </li>
-      <li class="item">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1704/a5/a59677101e07d38a3.img.jpg_200x200_6064e939.jpg" />
-        <div class="item-info">
-          <p class="item-list item-title">国色天乡·陆地乐园</p>
-          <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看详情</span>
-        </div>
-      </li>
-      <li class="item">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1704/a5/a59677101e07d38a3.img.jpg_200x200_6064e939.jpg" />
-        <div class="item-info">
-          <p class="item-list item-title">国色天乡·陆地乐园</p>
-          <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看详情</span>
-        </div>
-      </li>
-      <li class="item">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1704/a5/a59677101e07d38a3.img.jpg_200x200_6064e939.jpg" />
-        <div class="item-info">
-          <p class="item-list item-title">国色天乡·陆地乐园</p>
-          <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看详情</span>
-        </div>
-      </li>
-      <li class="item">
-        <img class="item-img" src="http://img1.qunarzz.com/sight/p0/1704/a5/a59677101e07d38a3.img.jpg_200x200_6064e939.jpg" />
-        <div class="item-info">
-          <p class="item-list item-title">国色天乡·陆地乐园</p>
-          <p class="item-list item-desc">哈哈哈哈哈哈或哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈或或</p>
-          <span class="item-more">查看详情></span>
         </div>
       </li>
     </ul>
@@ -48,7 +16,10 @@
 
 <script>
   export default {
-    name: "HomeRecommend"
+    name: "HomeRecommend",
+    props: {
+      recommendList: Array
+    }
   }
 </script>
 
