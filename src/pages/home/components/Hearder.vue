@@ -7,10 +7,12 @@
       <span class="iconfont">&#xe632;</span>
       输入城市/景点/游玩主题
     </div>
-    <div class="header-right">
-      {{city}}
-      <span class="iconfont arror-icon">&#xe64a;</span>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <span class="iconfont arror-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,8 +30,8 @@
   @import '~styles/default.styl'
   .header
     display flex
-    height .86rem
-    line-height .86rem
+    height $headerHeight
+    line-height $headerHeight
     color #fff
     background $bgColor
 
@@ -55,6 +57,7 @@
       float right
       width 1.24rem
       text-align center
+      color #fff
       .arror-icon
         margin-left -.04rem
         font-size .24rem
