@@ -9,7 +9,7 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{city}}
+        {{this.$store.state.city}}
         <span class="iconfont arror-icon">&#xe64a;</span>
       </div>
     </router-link>
@@ -19,10 +19,7 @@
 
 <script>
   export default {
-    name: 'HomeHearder',
-    props: {
-      city: String
-    }
+    name: 'HomeHearder'
   }
 </script>
 
@@ -58,6 +55,7 @@
       width 1.24rem
       text-align center
       color #fff
+      ellipsis()
       .arror-icon
         margin-left -.04rem
         font-size .24rem

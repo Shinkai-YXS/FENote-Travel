@@ -1,6 +1,6 @@
 <template>
   <div>
-    <home-hearder :city="city"/>
+    <home-hearder/>
     <home-swiper :swiperList="swiperList"/>
     <home-icons :icons="icons"/>
     <home-recommend :recommendList="recommendList"/>
@@ -27,7 +27,6 @@
     },
     data () {
       return {
-        city: '',
         swiperList: [],
         icons: [],
         recommendList: [],
@@ -45,10 +44,8 @@
       },
       getHomeInfoSucc (res) {
         res = res.data
-        console.log(res)
         if (res.ret && res.data) {
           let data = res.data
-          this.city = '快快'
           this.swiperList = data.swiperList
           this.icons = data.iconList
           this.recommendList = data.recommendList
