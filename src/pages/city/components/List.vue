@@ -94,6 +94,7 @@
           ellipsis()
     .item-list
       padding-left .2rem
+      padding-right .6rem
       .item
         line-height .68rem
         font-size .28rem
