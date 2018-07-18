@@ -20,7 +20,8 @@
       return {
         swiperOption: {
           pagination: '.swiper-pagination', // 显示分页功能组件
-          loop: true // 支持循环轮播
+          loop: true, // 支持循环轮播
+          autoplay : 3000
         }
       }
     },
