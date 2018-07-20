@@ -73,6 +73,7 @@
     font-size $titleFontSize
     color #fff
     background-color $bgColor
+    z-index 1
     .header-fixed-back
       position absolute
       top 0
