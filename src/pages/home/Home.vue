@@ -52,7 +52,7 @@
     },
     methods: {
       getHomeInfo () {
-        axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc).catch(function (error) {
+        axios.get('https://raw.githubusercontent.com/yuxiaoshuang1994/FENote-Travel/master/static/mock/index.json?city=' + this.city).then(this.getHomeInfoSucc).catch(function (error) {
           console.log(error)
         })
       },

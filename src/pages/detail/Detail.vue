@@ -24,26 +24,7 @@
         sightName: '',
         bannerImg: '',
         gallaryImgs: [],
-        list: [
-          {
-            id: 1,
-            title: '成人票',
-            children: [
-              {
-                id: 1,
-                title: '哈哈哈',
-                children: [
-                  {
-                    id: 1,
-                    title: '嘻嘻嘻嘻'
-                  }
-                ]
-              }
-            ]
-          },
-          {id: 2,title: '学生票'},
-          {id: 3,title: '儿童票'},
-          {id: 4,title: '特惠票'}]
+        list: []
       }
     },
     activated () {
@@ -51,7 +32,7 @@
     },
     methods: {
       getDetailInfo () {
-        axios.get('/api/detail.json', {
+        axios.get('https://raw.githubusercontent.com/yuxiaoshuang1994/FENote-Travel/master/static/mock/detail.json', {
           id: this.$route.params.id
         }).then(this.getDetailSucc).catch(function (e) {
           console.log(e)

@@ -33,7 +33,7 @@
     },
     methods: {
       getCityInfo() {
-        axios.get('/api/city.json').then(this.getCitySuccess).catch(function (error) {
+        axios.get('https://raw.githubusercontent.com/yuxiaoshuang1994/FENote-Travel/master/static/mock/city.json').then(this.getCitySuccess).catch(function (error) {
           console.log(error)
         })
       },
