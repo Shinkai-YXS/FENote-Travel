@@ -26,6 +26,10 @@
     activated () {
       window.addEventListener('scroll', this.handleScroll)
     },
+    deactivated () {
+      // 页面即将被隐藏时执行
+      window.removeEventListener('scroll', this.handleScroll)
+    },
     methods: {
       handleScroll () {
         const top = document.documentElement.scrollTop
