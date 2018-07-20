@@ -12,7 +12,7 @@
       <div>
         <div class="title border-topbottom"> 热门城市 </div>
         <ul class="list-wrapper">
-          <li class="button-wrapper" v-for="item of hot" :key="item.id" @click="handleCityClick(item.name)">
+          <li class="button-wrapper" v-for="item of hot" :key="item.id" @click.stop="handleCityClick(item.name)">
             <div class="button">{{item.name}}</div>
           </li>
         </ul>
@@ -22,7 +22,7 @@
         <li v-for="(item, key) of cities" :key="key" :ref="key">
           <div class="title border-topbottom"> {{key}} </div>
           <ul class="item-list">
-            <li class="item border-bottom" v-for="innerItem of item" :key="innerItem.id" @click="handleCityClick(innerItem.name)">{{innerItem.name}}</li>
+            <li class="item border-bottom" v-for="innerItem of item" :key="innerItem.id" @click.stop="handleCityClick(innerItem.name)">{{innerItem.name}}</li>
           </ul>
         </li>
       </ul>
@@ -41,7 +41,9 @@
       letter: String
     },
     mounted() {
-      this.scroll = new Bscroll(this.$refs.wrapper)
+      this.scroll = new Bscroll(this.$refs.wrapper, {
+        click: true
+      })
     },
     watch: {
       letter () {
