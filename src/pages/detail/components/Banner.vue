@@ -1,38 +1,42 @@
 <template>
   <div>
     <div class="banner" @click="handelBannerClick">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_600x330_3b0fdac5.jpg" />
+      <img class="banner-img" :src="bannerImg"/>
       <div class="banner-info">
-        <div class="banner-title">打脸圣亚海洋世界(AAAA景区)</div>
-        <div class="banner-number"><span class="iconfont baaner-icon">&#xe692;</span>39</div>
+        <div class="banner-title">{{sightName}}</div>
+        <div class="banner-number"><span class="iconfont baaner-icon">&#xe692;</span>{{gallaryImgs.length}}</div>
       </div>
     </div>
-    <common-gallary :images="images" v-show="showGallary" @close="handleGallaryClose"/>
+    <common-gallary :images="gallaryImgs" v-show="showGallary" @close="handleGallaryClose"/>
   </div>
 </template>
 
 <script>
   import CommonGallary from '@/common/gallary/Gallary'
+
   export default {
     name: "DetailBanner",
     components: {
       CommonGallary
     },
-    data () {
+    props: {
+      sightName: String,
+      bannerImg: String,
+      gallaryImgs: Array
+    },
+    data() {
       return {
-        images: [{id: 1, imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_r_800x800_fa912897.jpg'},
-            {id: 2, imgUrl: 'http://img1.qunarzz.com/sight/p0/1612/c1/c14c2639b55cf054a3.img.jpg_r_800x800_aea4694a.jpg'}],
-          showGallary: false
-        }
-      },
-      methods: {
-        handelBannerClick () {
-          this.showGallary = true
-        },
-        handleGallaryClose () {
-          this.showGallary = false
-        }
+        showGallary: false
       }
+    },
+    methods: {
+      handelBannerClick() {
+        this.showGallary = true
+      },
+      handleGallaryClose() {
+        this.showGallary = false
+      }
+    }
   }
 </script>
 
